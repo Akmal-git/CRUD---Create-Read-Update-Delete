@@ -14,13 +14,31 @@
 
 <body>
     <h1>CRUD - Create Read Update Delete</h1>
+    <a>Add New User </a>
     <div class="container">
-        <div class="box">
-            <h3>First name :</h3>
-            <h3>Last name :</h3>
-            <h3>Address :</h3>
-        </div>
+        <table>
+            <tr>
+                <th>UserID</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Address</th>
+                <th>Created At</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Akmal</td>
+                <td>Egamberdiyev</td>
+                <td>Surxondaryo</td>
+                <td>2023-10-12</td>
+                <td>
+                    <button class="edit-btn"> 🖋 Edit</button>
+                    <button class="delete-btn"> 🗑 Delete</button>
+                </td>
+            </tr>
+        </table>
     </div>
+
 </body>
 
 </html>
