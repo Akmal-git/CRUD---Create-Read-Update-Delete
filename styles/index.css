@@ -1,0 +1,19 @@
+body {
+    background-color: #333;
+    color: rgb(226, 14, 14);
+}
+
+body>h1 {
+    color: rgb(37, 186, 45);
+    text-align: center;
+}
+
+.box {
+    width: 50%;
+    height: 400px;
+    background-color: #39c12c;
+}
+
+.box>h3 {
+    color: aqua;
+}
