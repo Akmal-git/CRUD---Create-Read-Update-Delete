@@ -14,7 +14,7 @@
 
 <body>
     <h1>CRUD - Create Read Update Delete</h1>
-    <a>Add New User </a>
+    <a href="./create.php">Add New User </a>
     <div class="container">
         <table>
             <tr>

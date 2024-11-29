@@ -20,7 +20,8 @@ a {
     cursor: pointer;
     margin-left: 5%;
     font-size: 18px;
-    transition: all 1s;
+    transition: all 0.5s;
+    text-decoration: none;
 }
 
 a:hover {
