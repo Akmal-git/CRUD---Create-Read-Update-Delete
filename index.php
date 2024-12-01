@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['DELETE'])) {
                         <form method="POST" action="" onSubmit="return confirm('Rostan ham ochirilsinmi?')">
                             <input type="hidden" name="post_id" value="<?= htmlspecialchars($data['id'], ENT_QUOTES) ?>" /> <!-- To'g'ri yozilishi kerak -->
                             <input type="hidden" name="DELETE" />
-                            <a href="" class="edit-btn">🖋 Edit</a>
+                            <a href="./edit.php" class="edit-btn">🖋 Edit</a>
                             <button class="delete-btn"> 🗑 Delete</button>
                         </form>
                     </td>

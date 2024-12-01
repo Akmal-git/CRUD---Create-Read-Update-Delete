@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 
 require './database.php';
 
@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 
 <body>
-    <form action="./index.php" method="POST">
+    <form action="" method="POST">
         <a href="./index.php">Go back</a>
         <label>Ism:</label>
         <input type="text" name="ism" required />
