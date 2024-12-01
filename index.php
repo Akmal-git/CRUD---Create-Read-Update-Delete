@@ -1,5 +1,12 @@
 <?php
-// require './database.php';
+session_start();
+require './database.php';
+
+$statement = $pdo->prepare('SELECT * FROM crud WHERE 1');
+$statement->execute();
+$crud = $statement->fetchAll();
+// var_dump($crud);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,17 +32,19 @@
                 <th>Created At</th>
                 <th>Action</th>
             </tr>
-            <tr>
-                <td>1</td>
-                <td>Akmal</td>
-                <td>Egamberdiyev</td>
-                <td>Surxondaryo</td>
-                <td>2023-10-12</td>
-                <td>
-                    <button class="edit-btn"> 🖋 Edit</button>
-                    <button class="delete-btn"> 🗑 Delete</button>
-                </td>
-            </tr>
+            <?php foreach ($crud as $data): ?>
+                <tr>
+                    <td><?= $data['id'] ?></td>
+                    <td><?= $data['first_name'] ?></td>
+                    <td><?= $data['last_name'] ?></td>
+                    <td><?= $data['addres_s'] ?></td>
+                    <td><?= $data['create_at'] ?></td>
+                    <td>
+                        <button class="edit-btn"> 🖋 Edit</button>
+                        <button class="delete-btn"> 🗑 Delete</button>
+                    </td>
+                </tr>
+            <?php endforeach ?>
         </table>
     </div>
 

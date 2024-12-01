@@ -47,10 +47,13 @@ input {
     border-radius: 5px;
 }
 
-input:required {
-    /* border: 2px solid red; */
-    /* Talab qilingan maydonlar uchun qizil chegarani ko'rsatadi */
+textarea {
+    font-size: 20px;
 }
+
+/* input:required {
+    border: 2px solid red;
+} */
 
 button {
     width: 100px;
@@ -63,4 +66,9 @@ button {
     background-color: blue;
     color: white;
     margin: auto;
+}
+
+button:hover {
+    border-radius: 0px;
+    color: chartreuse;
 }
