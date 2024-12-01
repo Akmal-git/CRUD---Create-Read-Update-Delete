@@ -64,6 +64,7 @@ th {
 
 .edit-btn {
     background-color: chartreuse;
+    padding: 7px 15px;
 }
 
 .delete-btn {
