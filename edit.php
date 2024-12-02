@@ -2,21 +2,12 @@
 require './database.php';
 session_start();
 
-// if (!isset($_GET['id'])) {
-//     header('Location: index.php');
-//     exit;
-// }
 
 $post_id = $_GET['id'];
 $statement = $pdo->prepare('SELECT * FROM crud WHERE id=?');
 $statement->execute([$post_id]);
 $post = $statement->fetch();
 
-// Agar post topilmasa, foydalanuvchini index.php ga yo'naltirasiz
-// if (!$post) {
-//     header('Location: index.php');
-//     exit;
-// }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['PUT'])) {
     $id = $_POST['post_id'];
@@ -36,12 +27,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['PUT'])) {
 
 <!DOCTYPE html>
 <html lang="uz">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/create.css">
     <title>Edit page</title>
 </head>
+
 <body>
     <form method="POST" action="">
         <input type="hidden" name="post_id" value="<?= $post['id'] ?>" />
@@ -55,4 +48,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['PUT'])) {
         <button type="submit" name="PUT">Edit</button>
     </form>
 </body>
+
 </html>
